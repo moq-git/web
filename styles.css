@@ -1,0 +1,612 @@
+/* Reset CSS pour enlever les marges et espacements par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style de base pour le body */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #FFFFFF;
+    color: #1D1616;
+    line-height: 1.6;
+}
+
+/* Style du header (menu de navigation) */
+/* Style pour le header et le logo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0; /* Reste fixé en haut de la page */
+    z-index: 1000;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+nav a {
+    color: #FE580D;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #000000;
+}
+
+#accueil {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Style de base pour le body */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #FFFFFF;
+    color: #1D1616;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Section d'accueil */
+#accueil {
+    height: 100vh;
+    background: url('images/image_accueil.jpg') center center no-repeat; /* Image de fond */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.accueil-content {
+    color: #FFFFFF;
+    padding: 20px;
+    max-width: 800px;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.accueil-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.accueil-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #FE580D;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-btn:hover {
+    background-color: #1D1616;
+    color: #FE580D;
+}
+
+
+/* Style général pour la section "Qui suis-je ?" */
+#qui-suis-je {
+    padding: 80px 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1D1616;
+    margin-bottom: 40px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-text {
+    max-width: 700px;
+}
+
+.profile-text p {
+    font-size: 1.2rem;
+    color: #1D1616;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skills-list li {
+    background-color: #FE580D;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.skills-list li:hover {
+    background-color: #1D1616;
+    color: #FE580D;
+}
+
+/* Section "Mes créations" */
+#mes-creations {
+    padding: 80px 20px;
+    background-color: #F7F7F7;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.overlay p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Section "Avis clients" */
+#avis-clients {
+    padding: 80px 20px;
+    background: url('images/avis_client.jpg') center center no-repeat;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1D1616;
+    margin-bottom: 40px;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-item {
+    background-color: #FE580D;
+    color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-item p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.testimonial-item strong {
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Section "Contact" */
+#contact {
+    padding: 80px 20px;
+    background-color: #F7F7F7;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1D1616;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.contact-info p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #1D1616;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #FE580D;
+    font-weight: 600;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #FE580D;
+}
+
+.contact-form button {
+    background-color: #FE580D;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #1D1616;
+    color: #FE580D;
+}
+
+/* Section "Tarifs" */
+#tarifs {
+    padding: 80px 20px;
+    background-color: #F7F7F7;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1D1616;
+    margin-bottom: 40px;
+}
+
+.tarif-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tarif-card {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarif-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tarif-card h3 {
+    font-size: 2rem;
+    color: #1D1616;
+    margin-bottom: 20px;
+}
+
+.tarif-card .prix {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FE580D;
+    margin-bottom: 20px;
+}
+
+.tarif-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.tarif-card li {
+    font-size: 1rem;
+    color: #1D1616;
+    margin-bottom: 10px;
+}
+
+.tarif-card button {
+    background-color: #FE580D;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tarif-card button:hover {
+    background-color: #1D1616;
+    color: #FE580D;
+}
+
+/* Section "Quelques chiffres" */
+#chiffres {
+    padding: 80px 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1D1616;
+    margin-bottom: 40px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.stat-item {
+    background-color: #FE580D;
+    color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+/* Animation des chiffres */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        counter-reset: stat 0;
+    }
+    to {
+        opacity: 1;
+        counter-reset: stat 1;
+    }
+}
+
+/* Footer */
+#footer {
+    background-color: #1D1616;
+    color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-left p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.footer-right .social-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-right .social-links li {
+    display: inline;
+}
+
+.footer-right .social-links a {
+    color: #FE580D;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-right .social-links a:hover {
+    color: #FFFFFF;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.footer-links ul li {
+    display: inline;
+}
+
+.footer-links ul li a {
+    color: #FE580D;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+#footer .logo {
+    height: 80px;
+    width: auto;
+}
