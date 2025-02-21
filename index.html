@@ -16,6 +16,12 @@
         <img src="images/MOQ_logo.gif" alt="Logo de Mon Portfolio" class="logo">
     </div>
     <nav>
+        <!-- Menu burger -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <nav class="menu">
         <ul>
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#qui-suis-je">Qui suis-je ?</a></li>
@@ -25,6 +31,8 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
+    
 </header>
 
 
@@ -96,7 +104,7 @@
         <h2>Avis clients</h2>
         <div class="testimonials">
             <div class="testimonial-item">
-                <p>"..." </p>
+                <p>"Nous avons commandé à MOQ notre logo et nous sommes ravis, nous lui avons donné quelques idées et il a su créer notre logo idéal, nous avons par la suite commandé des boîtes pour nos sablés et même résultat : impeccable. Nous recommandons avec plaisir." </p>
                 <p><strong>- Le fournil du château</strong></p>
             </div>
             <div class="testimonial-item">
@@ -223,6 +231,25 @@
         });
     });
 </script>
+<script>
+    // Fonction pour activer/désactiver le menu burger
+    function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active'); // Ouvre ou ferme le menu
+    }
+
+    // Fermer le menu lorsque l'on clique sur un lien
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            const menu = document.querySelector('.menu');
+            menu.classList.remove('active'); // Ferme le menu en retirant la classe 'active'
+        });
+    });
+</script>
+</body>
+
+</body>
+
 
 <!-- Section "Contact" -->
 <section id="contact">

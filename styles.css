@@ -196,6 +196,55 @@ h2 {
     background-color: #1D1616;
     color: #FE580D;
 }
+/* ------------------- MEDIA QUERIES POUR LE RESPONSIVE ------------------- */
+
+/* Pour les écrans de taille tablette ou mobile (1024px et moins) */
+@media (max-width: 1024px) {
+    .profile {
+        flex-direction: column; /* Empile les éléments (image et texte) en colonne */
+        gap: 40px; /* Plus d'espace entre les éléments */
+    }
+
+    /* Ajustement de l'image sur les petites résolutions */
+    .profile-image img {
+        width: 120px; /* Réduction de la taille de l'image */
+        height: 120px;
+    }
+
+    .profile-text p {
+        font-size: 1.1rem; /* Réduction de la taille du texte */
+    }
+
+    .skills-list {
+        flex-direction: column; /* Affichage des compétences en colonne */
+        align-items: center; /* Centrage des éléments */
+        gap: 15px;
+    }
+}
+
+/* Pour les petits écrans de téléphone (768px et moins) */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column; /* Empile en colonne pour plus de fluidité */
+        gap: 40px;
+    }
+
+    /* Réduction de l'image pour les très petits écrans */
+    .profile-image img {
+        width: 100px; /* Encore plus petite image sur mobile */
+        height: 100px;
+    }
+
+    .profile-text p {
+        font-size: 1rem; /* Réduction du texte */
+        line-height: 1.4; /* Ajustement de l'interlignage */
+    }
+
+    .skills-list {
+        flex-direction: column; /* Les compétences en liste verticale */
+        gap: 10px;
+    }
+}
 
 /* Section "Mes créations" */
 #mes-creations {
@@ -308,6 +357,48 @@ h2 {
     color: #FFFFFF;
     font-weight: bold;
 }
+/* ------------------- MEDIA QUERIES POUR LE RESPONSIVE ------------------- */
+
+/* Pour les écrans de taille tablette ou mobile (1024px et moins) */
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grille plus compacte sur tablette */
+        gap: 20px; /* Moins d'espace entre les images */
+    }
+
+    .gallery-item img {
+        border-radius: 8px; /* Réduction de la bordure */
+    }
+
+    .overlay h3 {
+        font-size: 1.3rem; /* Réduction du titre sur petits écrans */
+    }
+
+    .overlay p {
+        font-size: 0.9rem; /* Réduction de la taille du texte */
+    }
+}
+
+/* Pour les petits écrans de téléphone (768px et moins) */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Affichage de 2 créations côte à côte */
+        gap: 15px; /* Espacement réduit */
+    }
+
+    .gallery-item img {
+        border-radius: 5px; /* Bordure encore plus petite pour les petits écrans */
+    }
+
+    .overlay h3 {
+        font-size: 1.2rem; /* Titre plus petit sur mobile */
+    }
+
+    .overlay p {
+        font-size: 0.85rem; /* Texte plus petit */
+    }
+}
+
 
 /* Section "Contact" */
 #contact {
@@ -609,4 +700,58 @@ h2 {
 #footer .logo {
     height: 80px;
     width: auto;
+}
+
+/* Menu de navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Par défaut, le menu est visible sur grand écran */
+.menu {
+    display: flex; /* Le menu reste en ligne */
+}
+
+/* Menu burger - caché par défaut */
+.menu-toggle {
+    display: none; /* On cache le bouton burger sur grand écran */
+}
+
+/* Pour les écrans plus petits (mobile) */
+@media screen and (max-width: 768px) {
+    /* En mobile, le menu est caché par défaut */
+    .menu {
+        display: none;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+    
+    /* Lorsque le menu est actif (toggle), il devient visible */
+    .menu.active {
+        display: block;
+    }
+
+    /* Le bouton burger devient visible uniquement sur mobile */
+    .menu-toggle {
+        color: #FE580D;
+        font-size: 50px;
+        display: block;
+    }
+
+    /* Ajuster les éléments du menu en mode mobile */
+    .menu ul {
+        flex-direction: column; /* Les éléments du menu s'empilent verticalement */
+        width: 100%;
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 15px 0;
+    }
 }
