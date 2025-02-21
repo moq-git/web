@@ -14,7 +14,6 @@ body {
 }
 
 /* Style du header (menu de navigation) */
-/* Style pour le header et le logo */
 header {
     display: flex;
     justify-content: space-between;
@@ -635,7 +634,7 @@ h2 {
     background-color: #1D1616;
     color: #FFFFFF;
     padding: 40px 20px;
-    text-align: center;
+    text-align: left;
     font-size: 1rem;
 }
 
@@ -716,7 +715,7 @@ nav {
 
 /* Menu burger - caché par défaut */
 .menu-toggle {
-    display: none; /* On cache le bouton burger sur grand écran */
+    display: none;
 }
 
 /* Pour les écrans plus petits (mobile) */
@@ -755,3 +754,23 @@ nav {
         margin: 15px 0;
     }
 }
+
+.cta-btn {
+    background-color: #FE580D;  /* Orange par défaut */
+    color: #FFFFFF !important;  /* Texte blanc avec priorité */
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animation pour la couleur du texte */
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.cta-btn:hover {
+    background-color: #1D1616 !important;  /* Fond sombre au survol */
+    color: #FE580D !important;  /* Texte orange au survol */
+}
+
